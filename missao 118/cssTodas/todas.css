@@ -1,0 +1,212 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+
+
+body{
+    background-color:rgb(253, 225, 190);
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+
+.logo img{
+    width: 200px;
+    height: auto;
+}
+
+
+
+nav{
+    display:flex;
+    gap:30px;
+    font-size:25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+nav a{
+    text-decoration:none;
+    color:black;
+}
+
+.linha {
+    border: none;
+    height: 20px;
+    background-color: #e2ddd2;
+    margin-top: -1px;
+    margin-bottom: 0;
+    box-shadow: 0px 0px 10px #5a5957;
+}
+.titulo{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.titulo h1{
+    display:inline-block;
+    background:#ddd6c8;
+    padding:15px 50px;
+    border-radius:12px;
+    font-size:65px;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+.todas{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    padding:40px;
+    border-top:2px solid #d1c7b4;
+}
+
+.coluna{
+    padding:20px;
+    border-right:1px solid #777;
+}
+
+.coluna:last-child{
+    border-right:none;
+}
+
+.coluna h2{
+    margin-bottom:10px;
+    font-size:34px;
+}
+
+.coluna p{
+    margin:10px 0;
+    font-size:22px;
+}
+
+.coluna ul{
+    margin-left:30px;
+    margin-bottom:15px;
+    font-size:20px;
+}
+
+.coluna li{
+    margin-bottom:5px;
+}
+
+.receitas{
+    font-weight:bold;
+    margin-top:15px;
+}
+
+
+.chef{
+    width:230px;
+    height:auto;
+}
+
+/* ===================== RESPONSIVO ===================== */
+
+/* Laptops menores / tablets grandes: 3 colunas apertam, passam a 2 */
+@media (max-width: 1100px){
+    .todas{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .coluna:nth-child(2){
+        border-right:none;
+    }
+}
+
+/* Tablets */
+@media(max-width:900px){
+
+    header{
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav{
+        display: flex;
+        gap: 15px;
+        font-size: 18px;
+    }
+
+    .chef{
+        width: 160px;
+    }
+
+    .todas{
+        grid-template-columns:1fr;
+        padding: 30px 25px;
+        gap: 20px;
+    }
+
+    .coluna{
+        border-right:none;
+        border-bottom:1px solid #999;
+    }
+
+    .coluna:last-child{
+        border-bottom: none;
+    }
+
+    .titulo{
+        padding: 40px 20px;
+    }
+
+    .titulo h1{
+        font-size:40px;
+        padding: 12px 30px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px){
+    header{
+        padding: 15px 20px;
+    }
+
+    .logo img{
+        width: 140px;
+    }
+
+    .chef{
+        width: 110px;
+    }
+
+    nav{
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .titulo h1{
+        font-size: 26px;
+        padding: 10px 20px;
+    }
+
+    .coluna h2{
+        font-size: 26px;
+    }
+
+    .coluna p{
+        font-size: 18px;
+    }
+
+    .coluna ul{
+        font-size: 17px;
+        margin-left: 20px;
+    }
+}

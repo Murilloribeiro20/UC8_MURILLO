@@ -1,0 +1,196 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(253, 225, 190);
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo{
+    width: 150px;
+    max-width: 40vw;
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+.btn{
+    padding: 10px 20px;
+    background-color: #d46c03;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.titulo{
+    background-color: #bb9a84;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 50px;
+    border-radius: 40%;
+    margin: 0 auto;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(2, 2, 2, 0.5);
+}
+.conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+    gap: 20px;
+}
+
+
+.lixta{
+    font-size: 40px;
+    line-height: 1.5;
+    padding-left: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    flex: 1 1 300px;
+}
+.lixta a{
+    color: black;
+    text-decoration: none;
+}
+
+.imagem-receita{
+    width: 700px;
+    max-width: 100%;
+    height: 500px;
+    max-height: 60vh;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    flex: 1 1 350px;
+}
+
+.descricao{
+    margin: 10px auto 20px;
+    background-color: #d8c9b5;
+    width: fit-content;
+    padding: 3px 10px;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(2, 2, 2, 0.5);
+}
+
+/* ===================== RESPONSIVO ===================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .titulo{
+        width: 50%;
+        font-size: 18px;
+    }
+
+    .lixta{
+        font-size: 30px;
+    }
+
+    .imagem-receita{
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+    }
+}
+
+/* Tablets pequenos / celulares grandes */
+@media (max-width: 768px) {
+    header{
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav{
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .titulo{
+        width: 70%;
+        height: 45px;
+        border-radius: 20px;
+    }
+
+    .conteudo{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 20px 10px;
+    }
+
+    .lixta{
+        font-size: 24px;
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .imagem-receita{
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        max-height: 350px;
+    }
+
+    .descricao{
+        margin: 10px auto 20px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    .logo{
+        width: 110px;
+    }
+
+    .btn{
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .titulo{
+        width: 90%;
+        height: 40px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+
+    .lixta{
+        font-size: 18px;
+    }
+
+    .imagem-receita{
+        max-height: 250px;
+    }
+
+    .descricao{
+        font-size: 16px;
+    }
+}
